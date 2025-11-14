@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Clover House</title>
+        <link rel="stylesheet" href="style.css">
+         <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+        <style>
+            body {background-color: #F8F4EA;
+                color: #2d2d2d;
+                font-family: "Merriweather", serif;}
+            h1 {text-align: center;
+                color:#F8F4EA}
+            a {text-decoration: none;
+                color: #d7a421;
+                transition: all .3s ease;}
+            a:visited {color: #d7a421;}
+            a:hover {font-weight: bold;
+                    color:#face20;
+                }
+
+            @media (max-width: 600px) {
+                    body {background-color: #87A48A;}
+                    }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div id="logo"> <!--Added extra span and logo div to achieve desired look when screen <=600px.  -->
+            <h1 style="color: #F8F4EA;"><span class="clover">Clover </span><span class="house">House</span></h1>
+            <p class="tagline">Whiskey & Bites</p>
+            </div>
+            <div id="navi">
+                <ul>
+                    <li><a href="./home.html">Home</a></li>
+                    <li><a href="./menu.html">Menu</a></li>
+                    <li><a href="menu.html#contact">Contact</a></li>
+                </ul>
+            </div>
+        </header>
+        <main>
+        <div id="intro" style="padding: 50px; background-color: #87A48A;">
+            <div class="intro-col"> <!--Used intro-col to control text width and centre text block while keeping left alignment-->
+            <h2 style="padding: 0 20px;">Welcome to Clover House</h2>
+            <p style="padding: 0 20px;">Inspired by the staples that make us homesick, our menu builds on the classic comforts you know and love. From 
+                Guinness-braised short ribs to perfectly fluffy curry chips, every dish is crafted with care, seasonal ingredients 
+                and a touch of modern flair. Pair your bites with a perfectly poured pint or a whiskey from our award winning 
+                collection.
+            </p>
+            </div>
+        </div>
+        </main>
+        <footer>
+            <a href="./home.html">
+            <img src="img/bighouse.png"
+                 srcset="img/bighouse.png 32w, img/smallhouse.png 24w"
+                 sizes="(max-width: 600px) 24px, 32px"
+                 class="home-icon"
+                 alt="Back to home">
+            </a>
+            <p>&copy; 2025 Clover House</p>
+        </footer>
+    </body>
+</html>

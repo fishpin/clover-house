@@ -1,0 +1,384 @@
+* { box-sizing: border-box; }
+
+html, body {
+    height: 100%;
+}
+
+img { 
+    max-width: 100%; height: auto; 
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #F8F4EA;
+    color:#2d2d2d;
+    font-family: "Merriweather", serif;
+    line-height: 1.5;
+    margin: 0;
+    
+}
+
+header {
+    position: fixed; /*fixed entire header instead of just the nav bar because it made sense from a UX perspective*/
+    top: 0;
+    width: 100%;
+    z-index: 100;
+
+    background-color: #0C452C;
+    background-image: url(img/clover.png);
+    background-position: center;
+    background-size: cover;
+    color: #F8F4EA;
+
+    padding: 24px;
+    margin: 0;
+    box-shadow: 8px 8px 32px #c8c3b6; /*added box shadows and inset shadows to control visual impact of different page elements*/
+}
+
+.headerimage {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+main {
+    margin-top: 240px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1 {
+    margin: 8px 0 0;
+}
+
+.tagline {
+    text-align: center;
+    font-style: italic;
+    font-size: 16px;
+    margin: 0 auto 8px;
+}
+
+#navi {
+    box-sizing: border-box;
+    border:2px solid #87A48A;
+    border-radius: 12px;
+    margin: 0 auto;
+    width: 50%;
+}
+
+#navi ul {
+    display: flex;
+    justify-content: center;
+    gap: 48px;
+    list-style-type: none;
+    padding: 0;
+    margin: 16px auto 0;
+    padding-bottom: 16px;
+}
+
+
+
+#intro {
+    padding: 24px;
+    width: 80%;
+    margin: 56px auto;
+    border-radius: 12px;
+    box-shadow: 8px 8px 32px #c8c3b6;
+}
+
+.intro-col {
+    max-width: 60ch; /* used ch instead of px or % to increase text readability */
+    margin: 0 auto;
+}
+
+.intro-col h2 { 
+    margin: 0;
+}
+.intro-col p  {
+    margin: 8px 0 0; 
+}
+
+#menu {
+    margin: 48px auto;
+}
+
+#menu h2{
+    text-align: center;
+    margin: 48px auto 16px;
+}
+#menu table {
+    background-color: #fdfff6;
+    max-width: 90%;
+    margin: auto;
+    padding: 16px;
+
+    border-radius: 12px;
+    box-shadow: 8px 8px 16px #c8c3b6;
+}
+
+
+#menu th {
+    font-size: 14px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  color: #0C452C;
+}
+
+#menu td:nth-child(2) { /*using nth-child() in these two instances felt more straightforward than adding a class to each affected element */
+    color: #444; 
+    font-size: 15px; 
+    width: 60%;
+    padding: 8px;
+}
+#menu td:nth-child(3) { 
+    text-align: right; 
+    white-space: nowrap; 
+}
+
+.dish {
+    height: 100%;
+    width: 40%;
+
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: cover; /*I didn't fit the full images into the space because it made the food look more delicious!*/
+    
+    background-color:  rgba(0, 0, 0, 0.5);
+    background-blend-mode: darken;
+
+    color:#FFFFFF;
+    text-shadow: -1px -1px 0 #0C452C, /*Added a series of text shadows to make an outline and increase text visibility over images*/
+                 1px -1px 0 #0C452C, 
+                 -1px 1px 0 #0C452C, 
+                 1px 1px 0 #0C452C;
+
+    padding: 5%;
+}
+.dish:hover { 
+    background-color: rgba(0, 0, 0, 0);
+    transform: scale(1.05); 
+    border-radius: 12px;
+}
+
+
+#currychips{
+    background-image: url("./img/chips.jpg");
+    transition: all .3s ease;
+    border-top-left-radius: 12px;
+} 
+
+#ribs {
+    background-image: url("./img/ribs.jpg");
+    transition: all .3s ease;
+
+} 
+
+#scallops {
+    background-image: url("./img/scallops.jpg");
+    transition: all .3s ease;
+    border-bottom-left-radius: 12px;
+}
+
+
+#contact {
+    max-width: 100%;
+    margin: 48px auto;
+}
+
+#contact h2{
+    text-align: center;
+    margin: 160px 48px 16px; /* contact has a large top margin to give navigating to this section using nav link more impact */
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+
+    background-color: #0C452C;
+    
+    border-radius: 12px;
+    box-shadow: 8px 8px 32px #c8c3b6;
+   
+    max-width: 70%; /* max-width limited to ensure whitespace regardless of viewport size*/
+    padding: 16px;
+    margin: 24px auto 42px;
+
+}
+
+input {
+    max-width: 100%;
+    font-family: inherit;
+    transition: all .3s;
+
+    border-radius: 12px;
+    border: none;
+    padding: 8px;
+    margin: 8px 16px;
+}
+textarea {
+    resize: none;
+    max-width: 100%;
+    height: 104px;
+    font-family: inherit;
+
+    border-radius: 12px;
+    border: none;
+    padding: 8px;
+    margin: 16px;
+}
+input:focus, textarea:focus {
+    border: none;
+    outline: none;
+    box-shadow: inset 2px 2px 8px #8e8980;
+    animation: zoom .3s forwards;
+
+}
+
+button {
+    width: 30%;
+    background-color: #137148;
+    color: #F8F4EA;
+    font-family: inherit;
+    
+    border: 0;
+    border-radius: 12px;
+
+    margin: 8px auto;
+    padding: 12px;
+
+    transition: all .3s ease;
+}
+button:hover {
+    background-color: #169860;
+}
+button:active {
+    background-color: #169860;
+    box-shadow: inset 0 0 16px #0C452C;
+
+}
+
+footer {
+    background-color: #0C452C;
+    background-image: url(img/clover.png);
+    background-position: center;
+    background-size: cover;
+    color: #F8F4EA;
+    box-shadow: 8px 8px 32px #8e8980;
+    text-align: center;
+    padding: 8px 0 8px;
+    height: auto;
+    width: 100%;
+    margin-top: auto;
+    
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.home-icon {
+    transition: all .3s ease;
+}
+.home-icon:hover {
+    content: url(img/bighouse_hover.png);
+}
+
+@media (max-width: 600px) {
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        background-image: url(img/clovers_small2.png);
+        background-position: center;
+        background-size: cover;
+
+        box-shadow: 8px 8px 32px #4f6351;
+    }
+                    
+    h1 {
+        font-size: 24px;
+        text-align: left;
+        padding: 0;
+        margin: 0;
+    }
+
+    .clover {
+        display: block;
+    }
+
+    main {
+        margin-top: 120px;
+    }
+                    
+    #intro {
+        box-shadow: none;
+    }
+
+    .tagline {
+        display: none; /*tagline hidden for increased readability on smaller viewports*/
+    }
+
+    #navi {
+        border: none; /*nav bar border also hidden for increased readability*/
+        padding: 0;
+        margin: 0;
+    }
+
+    #navi ul {
+        font-size: 14px;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        gap: 0;
+    }
+
+    #menu h2 {
+        margin: 16px;
+    }
+
+    #menu table {
+        box-shadow: 8px 8px 32px #4f6351;
+    }
+
+    #menu td {
+        font-size: 14px;
+    }
+
+    #menu td:nth-child(2) {
+    font-size: 14px;
+}
+
+    #contact h2 {
+        margin: 24px auto 0;
+    }
+
+    #contact form {
+        margin: 16px auto;
+        box-shadow: 8px 8px 32px #4f6351;
+    }
+
+    footer {
+        box-shadow: 8px -8px 32px #4f6351;
+    }
+    footer p{
+        font-size: 12px;
+    }
+    .home-icon:hover {
+    content: url(img/smallhouse_hover.png);
+}
+    
+}
+
+@keyframes zoom { /*created a subtle zoom-in effect for use on input/text areas*/
+    0% {transform: scale(1);}
+    100% {transform: scale(1.01);} 
+}
