@@ -21,5 +21,5 @@ Clover House is a two-page restaurant website built as a front-end project to pr
  - Google Fonts
 
 ## How to View
- - Visit https://fishpin.github.io/clover-house/home.html
+ - Visit https://fishpin.github.io/clover-house/
  - Navigate between pages using the header menu
